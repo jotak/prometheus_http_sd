@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"io/ioutil"
-  "log"
+	"log"
 	"net/http"
 	"os"
 
@@ -76,5 +76,5 @@ func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/target", CreateTarget).Queries("host", "{host}").Methods("PUT")
 	router.HandleFunc("/target", DeleteTarget).Queries("host", "{host}").Methods("DELETE")
-  log.Fatal(http.ListenAndServe(":9091", router))
+	log.Fatal(http.ListenAndServe(":9091", router))
 }
