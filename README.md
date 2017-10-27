@@ -2,6 +2,8 @@
 
 An "extension" of Prometheus _file_sd_, listening for HTTP requests on port 9091.
 
+Exemple of use: side-car container for Prometheus pod in Kubernetes.
+
 * **PUT /target?host=xxx** 
 Add given host as a Prometheus target to scrape
 
